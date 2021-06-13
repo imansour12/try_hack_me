@@ -1,0 +1,17 @@
+The ping command is used to see if a connection with an ip adress is possible.
+
+Ping uses the ICMP protocol.
+The ICMP protocol works on the Network layer of the OSI model and the Internet layer of the TCP/IP model.
+The basic syntax is:
+ping<target>
+
+The ping command doesn't return the domain adress you're connecting to, but rather the ip adress. So this makes it also a good tool to find the ip adress of a website.
+
+In order to change the interval of sent ping requrests use -i followed by the amount of seconds between each ping$
+
+To restrict pings to ipv4 use: -4
+To restrict pings to ipv6 use: -6
+To have a more verbose output use: -V
+
+Any extra syntax questions can be answered in the man page:
+man ping

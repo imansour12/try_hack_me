@@ -1,0 +1,16 @@
+A TCP/IP protocol called DNS (Domain Name System) is in charge of converting urls and domain names into IP adresses.
+
+First, the computer checks its cache to see if it has the cache for the ip adress of the domain name. If it does, it just goes ahead and connect.
+
+If it doesn't, it connects to a recursive DNS server. The sever adress will be already stored on your router. The recursive DNS server can either be your ISP's or one from another company like google or OpenDNS.
+The server which you just connected to, will maintain a cache of results for popular domains. However, if the website you requested isn't stored in the cache of popular dns servers, it will pass the request on to a root name server.
+
+Before 2014, there were 13 root name DNS servers. But today, there are much more, however, they all use the same ip adress. These servers do nothing but pass on your request to Top-Level Domain servers. Now these, are split into extensions, one handles .com domains while the other handles .tn domains etc..
+
+When a TLD server receives your request, it passes it down to an appropraite Authoritative name server. These servers have all the ip adresses for the domains. You can't go any deeper than this. After this, the ip adress is transferred back to you and you can use that to connect with TCP/IP or UDP or whatever.
+
+dig is a very useful tool for network troubleshooting, it allows you to manually query recursive DNS servers
+If you wanna use it, your command will look something like this:
+dig <domain> @<dns_server_ip>
+
+The dig command also gives us the TTL of the DNS record. TTL stands for (Time To Live). As mentioned before, the computer sometimes stores the websites ip in cache to not have to query it everytime it wants to access a website. The Time To Live is representative of how long before the cached ip the computer has stored is no longer valid and when does it need to re query it. It is important to remember that the TTL is measured in seconds 

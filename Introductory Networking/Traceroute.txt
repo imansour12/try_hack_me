@@ -1,0 +1,15 @@
+Traceroute is a command that can be used to look at the path my request takes to reach the machine on the other hand.
+In order to get my request somewhere, it has to go through many servers.
+
+The usual syntax is:
+traceroute <address>
+For Windows it's a little different,
+tracert <address>
+
+By default, tracroute in windows operates on the same protocol that ping uses (ICMP) which means that it runs on the Internet layer. However, on Linux, traceroute operates over UDP. This can be altered in both instances. 
+
+Use --tcp or -T for tcp syn connection if you're on linux and udp is the default
+You may use -I or --icmp if you want to use ICMP ECHO for probes
+
+For any extra syntax questions, check the man page:
+man traceroute

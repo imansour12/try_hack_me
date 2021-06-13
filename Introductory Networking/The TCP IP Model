@@ -1,0 +1,21 @@
+The TCP/IP model is kind of similar to the OSI model.
+It is this model that is actually used for network communications and not the OSI one. The OSI model is just easier for learning the theory of networking.
+
+TCP/IP layers:
+1. Application
+2. Transport
+3. Internet
+4. Network Interface
+
+Check out this picture for a side by side comparison of TCP/IP and OSI models : "https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image-3.png"
+
+The process of encapsulation and de-encapsulation is the same for the TCP/IP and the OSI model.
+TCP is connection based, meaning to send any data with tcp, you must first seek a stable connection. To make this connection, you use the three-way handshake.
+
+When you try to make a connection, you computer sends a request containing a SYN(synchronize) bit. The server responds with a packet containing the SYN bit as well as ACK(acknowledgment) bit. Finally, the computer returns the ACK bit by itself, thus, confirming that the connection has been set up. And because this is TCP, any lost or corrupt data is simply resent which makes the connection appear lossless.
+It is called a three way handshake because three exchanges have to happen for a connection to be established.
+
+***HISTORY PART -- SKIP IF YOU WANT BUT ITS KIND OF INTRESTING***
+Long time ago, different systems had different protocols and methodologies which made some systems incompatible depending on the brand.
+In 1982, the American DOD introduces the TCP/IP model to make a standard and have other manifacturers follow it to ensure compatibility between different products from different brands.
+Later on, the OSI model was introduced but the TCP/IP model stayed the standard and the OSI model is just used as a learning model.

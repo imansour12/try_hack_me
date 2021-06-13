@@ -1,0 +1,18 @@
+Encapsulation is the idea that the more layers data goes through, the more information is added to the transmission.
+
+Check out this for an accurate representation of this: 'https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image.jpeg'
+
+In the transport layer / Level 4, data added is no longer referred to as data but as segments or datagrams.
+
+In the network layer / Level 3, data is referred to as packets because it has been broken down into bits of information to carry at once.
+
+In the Data Link layer / Level 2, data is referred to as a frame.
+
+By the time the data is being transmitted across a network, it has been broken down into bits.
+
+When the data is received by the computer, it begins the process of removing the extra information given. This process is called de-encapsulation as it is the opposite of encapsulation. 
+
+Encapsulation and de-encapsulation give us a standardized way to send data. Standardized means that the network request will reach any device regradless of whether they run a different os, are from a different manifacturer, bla bla bla, Youget the point. Encapsulation provides an extra layer of security.
+
+Encapsulation provides an extra layer of securit as data cannot be tampered with without breaking the trailer added in Level2.
+

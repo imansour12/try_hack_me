@@ -1,0 +1,33 @@
+OSI model demonstrates the theory behind computer networking;
+There are many ways to remember it:
+
+Please Do Not Touch Steve's Pet Alligator
+
+P: Physical/level 1
+D: Data Link/level2
+N: Network/level3
+T: Transport/level4
+S: Session/level5
+P: Presentation/level6
+A: Application/level7
+
+Application / Level7:
+Gives an interface for application to transfer data and passes that down to the Presentation layer. This is the layer that accepts communication requests from applications.
+
+Presentation / Level6:
+Receives data from the application layer. The data coming in from the application layer is not understood by the application layer in the receiving computer0 What the presentation layer does, is make the format understandable for the other computer's application layer to understand it. After that, the presentation layer handles the encryption and compressionbefore passing the data down to the Session layer.
+
+Session / Level5:
+After it receives the data from the presentation layer, the session layer tries to establish a connection, if it does, it also works to maintain it, if it doesn't it's its job to throw out an error message. It also works with the session layer of the  other computer to synchronize the communication. Every session created is unique. Once, the two computers are connected, the data is passed down to the transport layer.
+
+Transport / Level4:
+The Transport layer chooses between the TCP or UDP protocol to use. TCP (Transmission Control Protocol) ensures relaibletransportation and makes sure every packet actually gets there. It ensures that every packet is sent and if any data islost, it is resent. However, the UDP (User Datagram Protocol) protocol just throws the data at the receiving computer andif it doesn't receive it, that's its problem. In conclusion, TCP is for reliability and UDP is for speed. The transport layer does one last thing which is break the chunk of data into smaller pieces. In TCP these are called Segments while in UDP these are called datagrams
+
+Network / Level3:
+This is the level for locating where our request will go. The network layer takes the IP adress of the destination and figures out the best route to take to it. IP adresses are an example of logical adressing. Logical adressing allows us tocategorize and organize network to establish order. One last thing the Network layer does is transfer the ip adress of the destination to the data link layer.
+
+Data Link / Level2:
+The Data Link layer takes the IP adress given from the Network layer and adds the device's MAC adress to it. Mac stands for (Media Access Control). The unique MAC adress is provided by the NIC (Network Interface Card). Plus: The unique MAc identifier is burnt into the card which means it is unchangeable. Although it can be spoofed. The MAC adress is what determines to which device the information is sent back. The Data Linker does a couple more things; First it presents the data in a format suitable for transmission and Second, it checks the received data for corruption. Corruption may happen in the next Physical layer.
+
+Physical / Level1:
+This layer is what converts the binary data given into signals to be transmitted on the network and it is also its job to take the incoming signals and change them back into binary data

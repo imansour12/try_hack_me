@@ -1,0 +1,9 @@
+Domains are made for you not to remember every single ip adress for the websites you want to visit
+Every domain translates into an IP adress.
+
+Domains are given out by registars. When you want a domain, these are the people you go to.
+
+The WHOIS tool shows you who the domain name is registered to. This is limited when it comes to Europe as personal details are reduced.
+
+To make a search, use this syntax:
+whois <domain>
